@@ -1,0 +1,5 @@
+
+MD5 sum of VHD source file on USB drive
+md5sum /run/media/hugin/USB256/df-project/exp-grok-2/grok-2/vm1-disk2-clone.vdi
+e824b5db82fa84bdcccc23c45a011291  /run/media/hugin/USB256/df-project/exp-grok-2/grok-2/vm1-disk2-clone.vdi
+

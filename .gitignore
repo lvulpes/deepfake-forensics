@@ -1,0 +1,9 @@
+
+*.vdi
+*.elf
+*.pcap
+*.pcapng
+*.vbox
+*.vbox-prev
+*.log
+
