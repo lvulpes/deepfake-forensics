@@ -1,0 +1,5 @@
+
+MD5 sum of VHD source file on USB drive
+
+MD5 sum of RAM dump source file on USB drive
+
