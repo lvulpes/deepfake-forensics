@@ -1,1 +1,38 @@
-Martin will start tomorrow
+Investigation procedures Cloud case 
+
+    Network traffic 
+
+    Use WireShark to:  
+    Find DNS Lookup of involved domains 
+    Find search engiene queries for input materials.  
+    Find Downloads of input Materials 
+    Find chatt conversation with AI 
+    Find Download of Deepfake 
+    Find upload of deepfake 
+
+    Disk image 
+    Use Autopsy / Magnet Axiom to:  
+    Find installed applications and artifacts 
+    Find chat conversations, check for cache in browser.  
+    Find Search engine queries 
+    Find Downloaded source material 
+    Find The downloaded deepfake output 
+    Find Account and Session artifacts.  
+    Check browser cache and find account/session artifaces.  
+    Find evidence of sharinge the deepfake 
+    Find potentials deletion or cleanup  
+    Run a keyword search and check for prompts, file names... 
+
+    Memory 
+    Use Volatilty (Memory forensic tool) to: 
+    Find running processes 
+    Find Active network connections 
+    Find rendered page content (images, other information that might be useful) in memory 
+    Find potential files stored in the memory.  
+    Check windows.clipboard for copy-pasted data or URLs 
+    Find loaded modules 
+    Run keyword searches for prompts, images files.  
+
+    Misc 
+    Search for other finding that might not be stated above: 
+    Document all findings 
