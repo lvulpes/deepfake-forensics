@@ -24,7 +24,9 @@ ip.addr == 104.18.28.234 || ip.addr == 104.18.29.234 || ip.addr == 108.162.192.2
 - 2026-09-23T12:18:28.586273200+0200        first DNS query for grok.com
 - 2026-09-23T12:18:28.901514700+0200        client sends SYN to grok.com
 - 2026-09-23T12:18:28.907765500+0200        TLS client hello
+- 2026-09-23T12:22:15.161413000+0200        165093: upload of picture_a to grok
 - 2026-09-23T12:22:15.192981200+0200        166784: upload of picture_b to grok
+- 2026-09-23T12:22:27.328016400+0200        168805: prompt from human to grok (tcp stream eq 654)
 - packet 168650: download of picture_b from grok (?)
 - 2026-09-23T12:25:17.686267500+0200        219859: upload of image to x.com
 
