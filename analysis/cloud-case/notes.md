@@ -132,3 +132,6 @@ Very strange instructions for grok in tcp stream eq 32
 
 # TO DO
 - Enrich above evidence with source, destination IPs, source MAC address
+- Save all relevant carved images
+- Delete irrelevant carved images
+- Add saved files to evidence-log
