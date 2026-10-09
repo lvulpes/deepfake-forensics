@@ -1,0 +1,64 @@
+
+1. Set up MCP servers
+We need WireMCP to work with Wireshark through an AI
+
+2. Make an LLM test run 
+Let Gemini investigate only DNS traffic, monitor token spend
+
+Test prompt:
+“
+A user is suspected of generating a deepfake image and uploading it to a social media. Identify the probable websites used in this traffic by analyzing the DNS traffic in the pcap. We're interested in domains that were likely used in the search for images, the generation of the deepfake and the social media used to share the image. Note DNS records queried, IP addresses they resolved to and the times the queries were sent. This is a test run in which you should only evaluate DNS traffic.
+Use WireMCP for your analysis.
+When analyzing network traffic, prioritize MCP tools over custom scripts. 
+The WireMCP server provides these functions:
+🟢 wiremcp - Ready (7 tools, 7 prompts)
+  Tools:
+  - mcp_wiremcp_analyze_pcap
+  - mcp_wiremcp_capture_packets
+  - mcp_wiremcp_check_ip_threats
+  - mcp_wiremcp_check_threats
+  - mcp_wiremcp_extract_credentials
+  - mcp_wiremcp_get_conversations
+  - mcp_wiremcp_get_summary_stats
+  Prompts:
+  - analyze_pcap_prompt
+  - capture_packets_prompt
+  - check_ip_threats_prompt
+  - check_threats_prompt
+  - conversations_prompt
+  - extract_credentials_prompt
+  - summary_stats_prompt
+Use mcp_wiremcp_analyze_pcap directly instead of writing tshark/python wrappers.
+PCAP to analyze is: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/dns-only.pcap
+Output a text file with your findings in a readable format.
+"
+
+Considerations for bottlenecking:
+One Practical Fix You Control
+
+If WireMCP is yours to modify, this single change could save the day:
+// In analyze_pcap tool handler
+const result = await tsharkProcess.exec({ maxBuffer: 50 * 1024 * 1024 });
+// RETURN: { summary: "...", domains: [...], raw_file: "/tmp/full_output.json" }
+// DON'T send 200K lines of packet data through MCP
+
+Return summaries + file paths instead of raw JSON. This slashes token usage without changing your prompt or workflow.
+Bottom Line
+
+Your prompt is fine. Your strategy is sound. The infrastructure quotas are simply insufficient for autonomous agent workloads. Either:
+
+    Accept that deep analyses require multi-day planning (spread across RPD resets)
+    Invest in higher API tiers
+    Or keep PCAPs smaller/truncated for testing
+
+For a production-grade forensic case on this 235MB file with these limits, hitting walls is expected behavior. Not a skill issue — just bad fit between task scope and API quotas.
+
+
+3. Break down work into segments
+Divide the work into segments that won't exhaust token limits based on above test run.
+
+4. Iterate on segments with AI 
+Let AI solve each segment and produce results
+
+5. Compare against human investigation
+Compare who got the most relevant evidence, AI or human.
