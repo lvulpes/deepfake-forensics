@@ -1,17 +1,9 @@
 ==================================================
  Script:      calculate_hashes.sh
- Executed:    2026-10-09 10:39:56
+ Executed:    2026-10-09 12:55:51
  Target Dir:  /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence
 ==================================================
 
-File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/9-23-3-keys.log
-  MD5:    e5aadb9ab5886311fef2225b66bfb60e
-  SHA256: b93ce9b1287ec642f07cbfc2a94a516ff76e7b6c21e8177f6eda9ce6dbc600b9
---------------------------------------------------
-File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/exp-grok-3.pcapng
-  MD5:    0c7bbb8e83d6dd72c5c2578ab54cacb4
-  SHA256: ad938c02b066364ab2eb573a6c47a7a7e64f5716aaa94e820989e89b2a82ce93
---------------------------------------------------
 File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/picture_b_extracted.png
   MD5:    bb4474421c43ba5fbd4979ee2e6ed39d
   SHA256: 1a89b3ffebf5855d803f7d31f590d6ed1109b5a605eb07f14b9e3168de2f2e88
@@ -20,87 +12,59 @@ File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/pictur
   MD5:    6983626591439253471e9ff269b61bde
   SHA256: b01800c673c13ae43aac0267690d22d83a3cb254eadced616e96055302886d51
 --------------------------------------------------
-File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/bing_ips.txt
-  MD5:    032451d12f07c1ce2d99c82d52f53ddf
-  SHA256: 004ae8e12632760a5626c4eea503ce54684a12a3816946255297b7fb73e535d8
---------------------------------------------------
-File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/grok_ips.txt
-  MD5:    ba5865a57c1173bd7cac3b36213e2c66
-  SHA256: d410ef452c79bcbbf444114cff565316ddd5f78a5d6f97c560ad22fc349ee53a
---------------------------------------------------
-File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/x_ips.txt
-  MD5:    f0bedc86702aae4f47c805c370c1dd75
-  SHA256: eeefa06876218fbb48ba167009fefa0bd99abb049b0c76a610112678117f9aa6
---------------------------------------------------
-File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/deepfake_upload_x.png
-  MD5:    7880f8440c5bdb0f94b1afb21ee67c1c
-  SHA256: 06bc7348f6b78480213eadaf1f463dde0e05cd1b597404fd1142d3c2b07960e7
---------------------------------------------------
-File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/deepfake_upload_x_carved.png
-  MD5:    99d786b508aa40d3d4f0165868030ae0
-  SHA256: c9dacd2523b78ff265088daaed0cff26b15d7630110063f66476a62bddc6e9c1
---------------------------------------------------
-File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/grok_download.bin
-  MD5:    e78b3f2884d71db838e3d96eb8c1a3a2
-  SHA256: 35396f957e633af665ada4f9d2ec0e08a3d1f6942152ac0c55583c4581ad86d0
---------------------------------------------------
-File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/grok_download_2.bin
-  MD5:    5d41bbf971661c5b6d7be27332a62fa8
-  SHA256: b421ea1d90abb2eb6d602b82c153743403ccf058650cac1d63954120dc0310a1
---------------------------------------------------
-File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/grok_unknown_download.png
-  MD5:    bb4474421c43ba5fbd4979ee2e6ed39d
-  SHA256: 1a89b3ffebf5855d803f7d31f590d6ed1109b5a605eb07f14b9e3168de2f2e88
---------------------------------------------------
-File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/upload_chunk.bin
-  MD5:    445529c3429a1a355d33c36e848f5b3d
-  SHA256: 404db38a7dccdd6c3815f3ef1c66fa8986d71f6dc60773765239a5a07b8b0261
---------------------------------------------------
 File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/grok_websocket_stream.txt
   MD5:    2bbed2d71aa3033e989e0ab173d7f06f
   SHA256: b390ea4224341ece8e5553f627aa8b2693acc3ec9ea523d18ce8ed8aaed24910
---------------------------------------------------
-File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/grok_image_websocket_base64.txt
-  MD5:    851e5f9649638adafda15126f895bbff
-  SHA256: e4ccfdce61a4cda81bc89eca3490d9f7227589b2c97c05a6092fc67a48fa155c
 --------------------------------------------------
 File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/grok_image_websocket_carved.jpg
   MD5:    301bd6105ff2aa179d3ad0ab0574f1da
   SHA256: 5cc39c84ee40b7208a9ca5ea222fbb8782e582ec501452d6053b1d50d74c8c14
 --------------------------------------------------
-File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/deepfake_thumbnail_grok.jpg
+File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/websocket_2_base64.txt
+  MD5:    4e13e526681bb0ac1bc2cd338926cfa1
+  SHA256: ebafd83955051b64b31a6a92e6797c669655d95716462baf4eebcc955dc7cca8
+--------------------------------------------------
+File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/9-23-3-keys.log
+  MD5:    e5aadb9ab5886311fef2225b66bfb60e
+  SHA256: b93ce9b1287ec642f07cbfc2a94a516ff76e7b6c21e8177f6eda9ce6dbc600b9
+--------------------------------------------------
+File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/deepfake.grok.com.jpg
   MD5:    f4e0968a4d4b6822b6d6ea13fa4a636a
   SHA256: 6dc66adc5da15ea874c46b67f615fc6b81c08eb0ac147d37bfe4d0e539ba4894
+--------------------------------------------------
+File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/deepfake.upload.x.com.png
+  MD5:    99d786b508aa40d3d4f0165868030ae0
+  SHA256: c9dacd2523b78ff265088daaed0cff26b15d7630110063f66476a62bddc6e9c1
 --------------------------------------------------
 File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/evidence_sni.csv
   MD5:    8e39c8d6c7b8a03932b08ab973016802
   SHA256: fd162a2f9a7ec575440cffc56d26bf2acc16c3575fb7d4a86ab8c991c380369e
 --------------------------------------------------
-File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/evidence_user_agents.csv
-  MD5:    3e7558b862d7edf9852f7cc338e941ab
-  SHA256: f55d457c09c89d8cd047daa1b8a1a8c2e2754059023dd311eece0cdf179c53c0
+File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/exp-grok-3.pcapng
+  MD5:    0c7bbb8e83d6dd72c5c2578ab54cacb4
+  SHA256: ad938c02b066364ab2eb573a6c47a7a7e64f5716aaa94e820989e89b2a82ce93
 --------------------------------------------------
-File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/websocket_2_base64.txt
-  MD5:    4e13e526681bb0ac1bc2cd338926cfa1
-  SHA256: ebafd83955051b64b31a6a92e6797c669655d95716462baf4eebcc955dc7cca8
---------------------------------------------------
-File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/2_websocket_carved
-  MD5:    53a41d40024286575beac7f5133490d8
-  SHA256: 0f188582fc5dd7380702f4aa8d17fb19382f499e3916349d18e33b250c01c88b
---------------------------------------------------
-File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/picture_a_carved.jpg
+File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/picture_a.cdn.ebs.newsner.com.jpg
   MD5:    ff05a74abf8137a8736a457a4e710b1a
   SHA256: b105d3c20bda97df052c55265795193cd328c8e232434d5cb95167b644b884db
 --------------------------------------------------
-File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/picture_a_from_bing.jpg
+File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/picture_a.grok.com.jpg
   MD5:    5fc60a547b0a7c1a5415364f7486cc4c
   SHA256: 576b2bf4134306762eef4fe18ec3885c61be36feb899a3ab84ca91b1572083fe
+--------------------------------------------------
+File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/picture_a.i0.web.de.jpg
+  MD5:    5fc60a547b0a7c1a5415364f7486cc4c
+  SHA256: 576b2bf4134306762eef4fe18ec3885c61be36feb899a3ab84ca91b1572083fe
+--------------------------------------------------
+File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/picture_b.grok.com.png
+  MD5:    6e0915d057765aa66384a39a90616677
+  SHA256: f633505c49a369d0821643a33fb8feba583f34142effe9e371fc1bf4e9ac7dfe
+--------------------------------------------------
+File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/picture_b.kourdi.com.png
+  MD5:    bb4474421c43ba5fbd4979ee2e6ed39d
+  SHA256: 1a89b3ffebf5855d803f7d31f590d6ed1109b5a605eb07f14b9e3168de2f2e88
 --------------------------------------------------
 File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/signature_1_carved
   MD5:    e13359a39cab69fff52fec5ce21a395d
   SHA256: f4deba87990f554f6f61a3692cdc03ca8fe6be224c02dc2366c6dc8b66eb5a7c
---------------------------------------------------
-File: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/signature_1_carved_again
-  MD5:    3d8457f524205aaaf1493fd58f1f89fa
-  SHA256: 97070852d5fb7bcb3f623fc52951ba4b41ce201204ccab248da2af523cfd3b33
 --------------------------------------------------
