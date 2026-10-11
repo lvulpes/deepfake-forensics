@@ -1,0 +1,46 @@
+# Deepfake Forensics: Suspect's Workflow - Source Image Search and Download Phase
+
+This report identifies the first part of the suspect's workflow in the cloud case: searching for and downloading source images of politicians (Stefan Löfven and Volodymyr Zelenskyj) used in the generation of the deepfake image.
+
+---
+
+## Summary of Key Events
+
+### 1. Bing Image Search for Stefan Löfven
+- **Frame Number:** 125961
+- **Client MAC:** 08:00:27:d4:c0:18
+- **Client IP:** 10.0.2.15
+- **Remote IP:** 2.23.172.105
+- **Time:** 2026-09-23T12:20:21.646058500+0200
+- **User Agent:** Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0
+- **URL:** https://www.bing.com/search?q=stefan+l%C3%B6fven&cvid=ffc581f5d00e41149665997955e1b051&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOdIBCDM1ODNqMGo3qAIAsAIA&FORM=ANNTA1&PC=U531
+
+### 2. Download of Stefan Löfven Source Image (Used in Deepfake)
+- **Frame Number:** 144986
+- **Client MAC:** 08:00:27:d4:c0:18
+- **Client IP:** 10.0.2.15
+- **Remote IP:** 2.23.88.229
+- **Time:** 2026-09-23T12:20:43.460336800+0200
+- **User Agent:** Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0
+- **URL:** https://i0.web.de/image/684/35972684,pd=2/stefan-loefven.jpg
+
+### 3. Bing Image Search for Volodymyr Zelenskyy
+- **Frame Number:** 148377
+- **Client MAC:** 08:00:27:d4:c0:18
+- **Client IP:** 10.0.2.15
+- **Remote IP:** 2.23.172.105
+- **Time:** 2026-09-23T12:21:00.396037800+0200
+- **User Agent:** Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0
+- **URL:** https://www.bing.com/search?q=volodymyr+zelenskyy&cvid=8bfab82eaa234590b917ae387d9c8989&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOdIBCDM0MjJqMGo3qAIAsAIA&FORM=ANNTA1&PC=U531
+
+### 4. Download of Volodymyr Zelenskyy Source Image (Used in Deepfake)
+- **Frame Number:** 159544
+- **Client MAC:** 08:00:27:d4:c0:18
+- **Client IP:** 10.0.2.15
+- **Remote IP:** 67.205.4.140
+- **Time:** 2026-09-23T12:21:21.010701000+0200
+- **User Agent:** Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0
+- **URL:** https://kourdi.com/wp-content/uploads/2022/11/Zelensky.png
+
+---
+*Investigation Phase 1 completed. Source images for Stefan Löfven and Volodymyr Zelenskyy have been successfully identified and downloaded.*

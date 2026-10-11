@@ -33,6 +33,50 @@ PCAP to analyze is: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/e
 Output a text file with your findings in a readable format.
 "
 
+To do: Be more specific on files to analyze, use sandbox deployment in docker.
+First prompt, search for search engine usage only. Change the first line of the above prompt to:
+A user is suspected of generating a deepfake image and uploading it to a social media. Identify the first part of the suspects workflow: searching for source images that were used in the deepfake generation. We know that two images of politicians were used: Volodymyr Zelenskyj and Stefan Löfven. For the most important events in the generation pipeline I want you to present the following facts:
+  frame number:
+  client mac:
+  client ip:
+  remote ip:
+  time:
+  user agent:
+  URL:
+  bytes downloaded (only for images):
+  image path: (only if image exported):
+  
+
+  Client always refers to the local machine, no matter the direction of traffic, remote is always the server on the internet. Use user agent and URL where applicable. The frame number should always be the first packet in the relevant conversation, not all packets. It's only used for verification purposes. I want the most important events only, focusing on the download of the relevant images. After the images have been downloaded your investigation finishes, as this is divided into steps.
+  The TLS key log file which can be used to decrypt the TLS (which is necessary to analyze the underlying HTTP2, can be found at: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/9-23-3-keys.log
+When analyzing network traffic, prioritize MCP tools over custom scripts. 
+The WireMCP server provides these functions:
+🟢 wiremcp - Ready (7 tools, 7 prompts)
+  Tools:
+  - mcp_wiremcp_analyze_pcap
+  - mcp_wiremcp_capture_packets
+  - mcp_wiremcp_check_ip_threats
+  - mcp_wiremcp_check_threats
+  - mcp_wiremcp_extract_credentials
+  - mcp_wiremcp_get_conversations
+  - mcp_wiremcp_get_summary_stats
+  Prompts:
+  - analyze_pcap_prompt
+  - capture_packets_prompt
+  - check_ip_threats_prompt
+  - check_threats_prompt
+  - conversations_prompt
+  - extract_credentials_prompt
+  - summary_stats_prompt
+Use mcp_wiremcp_analyze_pcap directly instead of writing tshark/python wrappers.
+PCAP to analyze is: /home/hugin/code/deepfake-forensics/data/cloud-case/grok-2/evidence/dns-only.pcap
+Output a text file with your findings in a readable format.
+
+
+
+
+
+
 Considerations for bottlenecking:
 One Practical Fix You Control
 
