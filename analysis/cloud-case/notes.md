@@ -42,3 +42,5 @@ Trying to run the test on a reduced pcap that only contains DNS traffic, which i
 First run, which failed:
 │  Model                           Reqs  Input Tokens   Cache Reads Output Tokens
 │  gemini-3.8-flash                  24       286,624       144,971           675
+
+The second test run used a narrower task and a subset of the full pcap. The outcome was that the LLM "cheated" by accessing the git history of the manual investigation and copied the results. It also exhausted the maximum requests per day and nearly exhausted the input token limit. The conclusion is that the LLM needs to run in a sandbox and the requests per day limit needs to be raised, if possible.
