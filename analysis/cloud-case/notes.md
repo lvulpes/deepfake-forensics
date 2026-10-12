@@ -113,3 +113,17 @@ image path: cloud-llm-investigation-2/Zelensky.png
      connection.
    - In this capture, the Bing searches all took place over a single long-lived TCP stream (Stream 493). Specifying in the instructions whether "frame number" refers to the transport-layer
      connection establishment (the TCP SYN packet) or the application-layer request (the GET / HEADERS frame) removes ambiguity when students or analysts report multi-transaction sessions.
+
+## Resources used
+
+``` terminal
+│  Model                         Reqs  Input Tokens   Cache Reads Output Tokens
+│  ────────────────────────────────────────────────────────────────────────────
+│  gemini-3.5-flash-lite              3         8,133             0     131   
+│    ↳ utility_router                 3         8,133             0     131   
+│  gemini-3.8-flash                  96    23,576,893    20,253,682     18,024
+│    ↳ main                          96    23,576,893    20,253,682     18,024
+│  gemini-3-flash-preview             5       338,746             0     703   
+│    ↳ utility_loop_detector          5       338,746             0     703   
+│  To resume this session: gemini --resume 35c18e09-15cb-4d14-b61b-c535b8c2cf3c  
+```
