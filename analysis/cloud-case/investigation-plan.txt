@@ -1,0 +1,47 @@
+
+1. Stage 1 of investigation (bing) prompt:
+"
+A user is suspected of generating a deepfake image and uploading it to a social media. Identify the first part of the suspects workflow: searching for source images that were used in the deepfake generation. We know that two images of politicians were used: Volodymyr Zelenskyj and Stefan Löfven. For the most important events in the generation pipeline I want you to present the following facts:
+  frame number:
+  client mac:
+  client ip:
+  remote ip:
+  time:
+  user agent:
+  URL:
+  bytes downloaded (only for images):
+  image path: (only if image was exported from the pcap):
+  
+
+  Client always refers to the local machine, no matter the direction of traffic, remote is always the server on the internet. Use user agent and URL where applicable. The frame number should always be the first packet in the relevant conversation, not all packets. It's only used for verification purposes. I want the most important events only, focusing on the download of the relevant images. After the images have been downloaded your investigation finishes, as this is divided into steps.
+When analyzing network traffic, prioritize MCP tools over custom scripts. 
+The WireMCP server provides these functions:
+🟢 wiremcp - Ready (7 tools, 7 prompts)
+  Tools:
+  - mcp_wiremcp_analyze_pcap
+  - mcp_wiremcp_capture_packets
+  - mcp_wiremcp_check_ip_threats
+  - mcp_wiremcp_check_threats
+  - mcp_wiremcp_extract_credentials
+  - mcp_wiremcp_get_conversations
+  - mcp_wiremcp_get_summary_stats
+  Prompts:
+  - analyze_pcap_prompt
+  - capture_packets_prompt
+  - check_ip_threats_prompt
+  - check_threats_prompt
+  - conversations_prompt
+  - extract_credentials_prompt
+  - summary_stats_prompt
+Use mcp_wiremcp_analyze_pcap directly instead of writing tshark/python wrappers.
+These are your files:
+   - cloud-llm-investigation-2/     # project workdir
+     - 9-23-3-keys.log              # TLS key log for decrypting HTTPS
+     - exp-grok-3.pcapng            # Source PCAP for your investigation
+Output a text file with your findings in a readable format, with the packets arranged in a timeline from first to last.
+
+
+3. Break down work into segments
+Divide the work into segments that won't exhaust token limits based on above test run.
+
+

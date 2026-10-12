@@ -1,0 +1,21 @@
+{
+  "security": {
+    "auth": {
+      "selectedType": "gemini-api-key"
+    }
+  },
+  "mcpServers": {
+    "wiremcp": {
+      "command": "node",
+      "args": [
+        "/opt/wiremcp/index.js"
+      ],
+      "env": {
+        "SAFE_BASE": "/home/node",
+        "WIREMCP_TIMEOUT_SECONDS": "300",
+        "WIREMCP_OUTPUT_FIELDS": "frame.number,frame.time,ip.src,ip.dst,tls.record.version,http.request.method,http.request.uri,http.response.code",
+        "WIREMCP_MAX_BYTES": "10485760"
+      }
+    }
+  }
+}
