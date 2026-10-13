@@ -66,6 +66,62 @@ URL: https://kourdi.com/wp-content/uploads/2022/11/Zelensky.png
 bytes downloaded: 1669711
 image path: cloud-llm-investigation-2/Zelensky.png
 
+Event 7: Upload of Source Image of Volodymyr Zelenskyy to Grok
+frame number: 164981
+client mac: 08:00:27:d4:c0:18
+client ip: 10.0.2.15
+remote ip: 104.18.28.234
+time: Sep 23, 2026 10:22:15.153241400 UTC (238.334519200 s)
+user agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0
+URL: https://grok.com/http/upload-file-v2/direct
+
+Event 8: Upload of Source Image of Stefan Löfven to Grok
+frame number: 165089
+client mac: 08:00:27:d4:c0:18
+client ip: 10.0.2.15
+remote ip: 104.18.28.234
+time: Sep 23, 2026 10:22:15.161244900 UTC (238.342522700 s)
+user agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0
+URL: https://grok.com/http/upload-file-v2/direct
+
+Event 9: Deepfake Generation Prompt to Grok
+frame number: 168805
+client mac: 08:00:27:d4:c0:18
+client ip: 10.0.2.15
+remote ip: 104.18.28.234
+time: Sep 23, 2026 10:22:27.328016400 UTC (250.509294200 s)
+user agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0
+URL: wss://grok.com/ws/mgw/?uid=bd99dc24-a9c9-4222-abe0-f5b4cd8ebe1d
+
+Event 10: Download of Generated Deepfake Image from Grok
+frame number: 170188
+client mac: 08:00:27:d4:c0:18
+client ip: 10.0.2.15
+remote ip: 104.18.29.234
+time: Sep 23, 2026 10:22:51.467660800 UTC (274.648938600 s)
+user agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0
+URL: https://assets.grok.com/users/bd99dc24-a9c9-4222-abe0-f5b4cd8ebe1d/generated/c588c87d-cc66-4da9-bd4c-0abd1e407503/image.jpg
+bytes downloaded: 241537
+image path: cloud-llm-investigation-2/image.jpg
+
+Event 11: Upload of Deepfake Image to X
+frame number: 218426
+client mac: 08:00:27:d4:c0:18
+client ip: 10.0.2.15
+remote ip: 172.66.0.227
+time: Sep 23, 2026 10:25:17.360618800 UTC (420.541896600 s)
+user agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0
+URL: https://upload.x.com/i/media/upload.json?command=INIT&total_bytes=1729314&media_type=image%2Fpng&media_category=tweet_image
+image path: cloud-llm-investigation-2/uploaded_to_x.png
+
+Event 12: Publication of Tweet with Deepfake Image on X
+frame number: 220003
+client mac: 08:00:27:d4:c0:18
+client ip: 10.0.2.15
+remote ip: 172.66.0.227
+time: Sep 23, 2026 10:25:28.306786700 UTC (431.488064500 s)
+user agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0
+URL: https://x.com/i/api/graphql/GYdIGqVWfZNho79bQ2XDoA/CreateTweet
 
 ## Lessons learned from Gemini
 
@@ -116,6 +172,7 @@ image path: cloud-llm-investigation-2/Zelensky.png
 
 ## Resources used
 
+### Stage 1
 ``` terminal
 │  Model                         Reqs  Input Tokens   Cache Reads Output Tokens
 │  ────────────────────────────────────────────────────────────────────────────
@@ -126,4 +183,36 @@ image path: cloud-llm-investigation-2/Zelensky.png
 │  gemini-3-flash-preview             5       338,746             0     703   
 │    ↳ utility_loop_detector          5       338,746             0     703   
 │  To resume this session: gemini --resume 35c18e09-15cb-4d14-b61b-c535b8c2cf3c  
+```
+
+### Stage 2
+``` terminal
+────────────────────────────────────────────────────────────────────────────────────
+│  Interaction Summary                                                             │
+│  Session ID:                 42f67896-872c-41ea-bc05-a08e946bfdd9                │
+│  Tool Calls:                 105 ( ✓ 104 x 1 )                                   │
+│  Success Rate:               99.0%                                               │
+│  User Agreement:             99.0% (105 reviewed)                                │
+│  Code Changes:               +82 -0                                              │
+│                                                                                  │
+│  Performance                                                                     │
+│  Wall Time:                  1h 53m 42s                                          │
+│  Agent Active:               38m 31s                                             │
+│    » API Time:               13m 35s (35.3%)                                     │
+│    » Tool Time:              24m 55s (64.7%)                                     │
+│                                                                                  │
+│                                                                                  │
+│  Model Usage                                                                     │
+│  Use /model to view model quota information                                      │
+│                                                                                  │
+│  Model                           Reqs  Input Tokens   Cache Reads Output Tokens  │
+│  ────────────────────────────────────────────────────────────────────────────────│
+│  gemini-3.5-flash-lite              7        61,001        24,366           235  │
+│    ↳ utility_router                 7        61,001        24,366           235  │
+│  gemini-3.8-flash                 104    21,653,162    17,453,776        14,834  │
+│    ↳ main                         104    21,653,162    17,453,776        14,834  │
+│  gemini-3-flash-preview             2       124,838             0           141  │
+│    ↳ utility_loop_detector          2       124,838             0           141  │
+│  To resume this session: gemini --resume 42f67896-872c-41ea-bc05-a08e946bfdd9    │
+╰──────────────────────────────────────────────────────────────────────────────────╯
 ```
