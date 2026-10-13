@@ -17,4 +17,7 @@ These are your files:
      - exp-grok-3.pcapng            # Source PCAP for your investigation
      - findings.txt                 # These are your own findings from previous sesions, they provide valuable context.
 The pcap is large (235 MB) you should be careful to not dump ALL http headers or ALL tcp conversations and so forth. Try to be as efficicent as you can!
+DO NOT export all HTTP objects, but make sure to look for images in the exported objects!
+### Consider breakaing down HTTPS traffic into individual HTTP2 streams, to dispatch them to smaller agents.
+### One could use an architect agent that can divide the work to smaller agents.
 Output a text file with your findings in a readable format, with the packets arranged in a timeline from first to last.
